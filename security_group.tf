@@ -22,6 +22,7 @@ resource "aws_security_group" "allow-ssh" {
   }
 }
 
+/*
 resource "aws_security_group" "allow-mariadb" {
   vpc_id      = aws_vpc.main.id
   name        = "allow-mariadb"
@@ -44,4 +45,4 @@ resource "aws_security_group" "allow-mariadb" {
   tags = {
     Name = "allow-mariadb"
   }
-}
+}*/

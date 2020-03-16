@@ -1,3 +1,4 @@
+/*
 resource "aws_db_parameter_group" "mariadb-parameters" {
   name        = "mariadb-parameters"
   family      = "mariadb10.1"
@@ -9,7 +10,7 @@ resource "aws_db_parameter_group" "mariadb-parameters" {
   }
 }
 
-resource "aws_db_subnet_group" "maria-subnet" {
+resource "aws_db_subnet_group" "maria-subnet2" {
   name        = "mariadb-subnet"
   description = "RDS subnet group"
   subnet_ids  = [aws_subnet.main-private-1.id, aws_subnet.main-private-2.id]
@@ -24,7 +25,7 @@ resource "aws_db_instance" "mariadb" {
   name                    = "mariadb"
   username                = "root"      # username
   password                = "123456.ab" #password: create your won random password
-  db_subnet_group_name    = aws_db_subnet_group.maria-subnet.name
+  db_subnet_group_name    = aws_db_subnet_group.maria-subnet2.name
   parameter_group_name    = "mariadb-parameters"
   multi_az                = "false"
   vpc_security_group_ids  = [aws_security_group.allow-mariadb.id]
@@ -34,4 +35,4 @@ resource "aws_db_instance" "mariadb" {
   tags = {
     Name = "mariadb-instance"
   }
-}
+}*/

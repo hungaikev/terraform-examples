@@ -1,8 +1,25 @@
-output "instance" {
-  value = aws_instance.myexample.public_ip
+output "web" {
+  value = aws_instance.web.public_ip
 }
 
-output "rds" {
-  value = aws_db_instance.mariadb.endpoint
+output "web1" {
+  value = aws_instance.web1.public_ip
 }
+
+output "web2" {
+  value = aws_instance.web2.public_ip
+}
+
+output "web3" {
+  value = aws_instance.web3.public_ip
+}
+
+output "web4" {
+  value = aws_instance.web4.public_ip
+}
+
+output "web5" {
+  value = aws_instance.web5.public_ip
+}
+
 

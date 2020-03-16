@@ -1,3 +1,4 @@
+/*
 resource "aws_iam_group" "administrators" {
   name = "administrators"
 }
@@ -20,4 +21,4 @@ resource "aws_iam_group_membership" "administrator-users" {
   name  = "adminitrator-users"
   group = aws_iam_group.administrators.name
   users = [aws_iam_user.admin1.name, aws_iam_user.admin2.name]
-}
+}*/
